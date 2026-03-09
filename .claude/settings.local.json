@@ -4,7 +4,12 @@
       "Bash(git:*)",
       "Bash(winget install:*)",
       "Bash(export:*)",
-      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" auth:*)"
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" auth:*)",
+      "Bash(schtasks:*)",
+      "Bash(cmd.exe:*)",
+      "Bash(powershell.exe:*)",
+      "WebFetch(domain:samjinwt.co.kr)",
+      "Bash(python:*)"
     ]
   }
 }

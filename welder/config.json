@@ -1,0 +1,63 @@
+{
+    "_설명": "삼진웰텍 OMEGA ROBO K3 - 뉴로메카 Indy7 연동 설정",
+    "_모델": "SAMJIN OMEGA ROBO K3 500A CO2 & ARC WELDER",
+
+    "welder": {
+        "model": "SamjinWeldingMachine",
+        "interface": "Analogue",
+
+        "_전압범위_설명": "용접기 실제 전압 범위 (V)",
+        "voltage_min": 0,
+        "voltage_max": 50,
+
+        "_전류범위_설명": "용접기 실제 전류 범위 (A)",
+        "current_min": 0,
+        "current_max": 500,
+
+        "_AO범위_설명": "로봇 I/O 보드 아날로그 출력 범위 (V) → 0~10V",
+        "ao_min": 0,
+        "ao_max": 10
+    },
+
+    "pin_map": {
+        "_설명": "로봇 I/O 보드 핀 번호 매핑 (인터페이스 박스 배선 기준)",
+
+        "DO": {
+            "_touch_on": "터치 센싱 ON/OFF → 용접기 TIS 단자",
+            "touch_on": 0,
+
+            "_arc_on": "아크(용접) ON/OFF → 용접기 WCR 단자",
+            "arc_on": 1,
+
+            "_gas_check": "가스 밸브 ON/OFF",
+            "gas_check": 2,
+
+            "_inching_plus": "와이어 피더 정방향 (와이어 나감)",
+            "inching_plus": 3,
+
+            "_inching_minus": "와이어 피더 역방향 (와이어 들어감)",
+            "inching_minus": 4
+        },
+
+        "DI": {
+            "_arc_feedback": "아크 상태 피드백 (용접 중 여부)",
+            "arc_feedback": 0,
+
+            "_welder_error": "용접기 에러 피드백",
+            "welder_error": 1,
+
+            "_touch_feedback": "터치 센싱 피드백 → 용접기 TIR 단자",
+            "touch_feedback": 2
+        },
+
+        "AO": {
+            "_voltage": "전압 제어 → 용접기 VC 단자 (0~10V → 0~50V)",
+            "voltage": 0,
+
+            "_current": "전류 제어 → 용접기 CC 단자 (0~10V → 0~500A)",
+            "current": 1
+        }
+    },
+
+    "_핀수정방법": "실제 배선 확인 후 위 DO/DI/AO 번호를 수정하세요"
+}
